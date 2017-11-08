@@ -21,14 +21,18 @@ namespace Zoo.ConsoleApp
       };
       var otherAnimals = new Animal[] {
         new Rabbit(new DateTime(2014, 1, 1)),
-        new Zebra(new DateTime(2008, 12, 1)) 
+        new Zebra(new DateTime(2008, 12, 1)),
+        new GuineaFowl(new DateTime(2015, 5, 24)),
+        new Rhino(new DateTime(2001, 1, 1)),
+        new Giraffe(new DateTime(2003, 6, 26))
       };
-      var animals = lions.Union<Animal>(otherAnimals).ToList();
+
+        var animals = lions.Union<Animal>(otherAnimals).ToList();
 
       var keepers = new[]
       {
         new Keeper(lions),
-        new Keeper(otherAnimals) 
+        new Keeper(otherAnimals)
       };
 
       var feedingScheduler = FeedingScheduler.Instance;

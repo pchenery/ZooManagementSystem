@@ -1,5 +1,6 @@
 ﻿using System.Collections.Generic;
 using Zoo.BusinessLogic.Models.Animals;
+using Zoo.BusinessLogic.Services;
 
 namespace Zoo.BusinessLogic.Models
 {
@@ -25,6 +26,10 @@ namespace Zoo.BusinessLogic.Models
     public void GroomAnimal(AnimalThatCanBeGroomed animalToGroom)
     {
       animalToGroom.Groom();
+    }
+    public void CleanAnimal(ICanHaveMuckSweptOut animalToClean)
+    {
+      animalToClean.Clean();
     }
   }
 }
