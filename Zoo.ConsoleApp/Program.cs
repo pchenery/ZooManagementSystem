@@ -37,6 +37,7 @@ namespace Zoo.ConsoleApp
 
       var feedingScheduler = FeedingScheduler.Instance;
       var groomingScheduler = GroomingScheduler.Instance;
+        var cleaningScheduler = CleaningScheduler.Instance;
 
       while (true)
       {
@@ -45,6 +46,9 @@ namespace Zoo.ConsoleApp
 
         Console.WriteLine("Grooming the animals...");
         groomingScheduler.AssignGroomingJobs(keepers, animals);
+
+        Console.WriteLine("Cleaning the animals...");
+        cleaningScheduler.AssignCleaningJobs(keepers, animals);
 
         Console.WriteLine("Done. Results:");
 

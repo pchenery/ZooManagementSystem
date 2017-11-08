@@ -29,7 +29,7 @@ namespace Zoo.BusinessLogic.Models
     }
     public void CleanAnimal(ICanHaveMuckSweptOut animalToClean)
     {
-      animalToClean.Clean();
+       animalToClean.Clean();
     }
   }
 }

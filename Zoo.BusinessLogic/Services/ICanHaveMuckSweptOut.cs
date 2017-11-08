@@ -9,5 +9,8 @@ namespace Zoo.BusinessLogic.Services
     public interface ICanHaveMuckSweptOut
     {
         void Clean();
+        string ToString();
     }
+
+
 }
