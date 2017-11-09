@@ -4,28 +4,28 @@ using Zoo.BusinessLogic.Models.Animals;
 
 namespace Zoo.BusinessLogic.Services
 {
-  public class GroomingScheduler
+  public class GroomingScheduler : IScheduler
   {
     private static GroomingScheduler instance;
 
-    public static GroomingScheduler Instance
-    {
-      get
-      {
-        if (instance == null)
+        public static GroomingScheduler Instance
         {
-          instance = new GroomingScheduler();
+            get
+            {
+                if (instance == null)
+                {
+                    instance = new GroomingScheduler();
+                }
+
+                return instance;
+            }
         }
 
-        return instance;
-      }
-    }
-
-    private GroomingScheduler()
+        private GroomingScheduler()
     {
     }
 
-    public void AssignGroomingJobs(IEnumerable<Keeper> keepers, IEnumerable<Animal> animals)
+    public void AssignJobs(IEnumerable<Keeper> keepers, IEnumerable<Animal> animals)
     {
       foreach (var keeper in keepers)
       {
